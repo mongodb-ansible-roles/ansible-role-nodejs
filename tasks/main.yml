@@ -1,0 +1,16 @@
+---
+- name: Ensure /opt/nodejs directory exists
+  become: true
+  file:
+    path: /opt/nodejs
+    state: directory
+
+- name: Download NodeJS binaries
+  become: true
+  unarchive:
+    src: "{{ nodejs_download_url_template }}"
+    dest: /opt/nodejs
+    remote_src: true
+  loop: "{{ nodejs_versions }}"
+  loop_control:
+    loop_var: nodejs_version

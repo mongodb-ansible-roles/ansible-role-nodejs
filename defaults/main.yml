@@ -1,0 +1,5 @@
+---
+nodejs_download_url_template: https://nodejs.org/dist/{{ nodejs_version }}/node-{{ nodejs_version }}-{{ distro }}-{{ architecture }}.tar.gz
+nodejs_versions:
+  - v12.16.0
+  - v8.11.3
