@@ -9,5 +9,11 @@ galaxy_info:
     - name: debian
       versions:
         - buster
+        - stretch
+    - name: ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
   galaxy_tags:
     - nodejs
