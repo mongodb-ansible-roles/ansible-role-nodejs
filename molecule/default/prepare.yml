@@ -16,3 +16,22 @@
           - sudo
           - tar
         state: present
+
+- gather_facts: false
+  hosts: archlinux
+  name: Prepare Archlinux
+  tasks:
+    - name: Raw update pacman database
+      raw: pacman -Syu --noconfirm
+      changed_when: false
+    - name: Raw install python
+      raw: pacman -S python3 --noconfirm
+      changed_when: false
+    - name: Install sudo
+      pacman:
+        name: sudo
+        state: present
+    - name: Create arch user
+      user:
+        name: arch
+        group: root

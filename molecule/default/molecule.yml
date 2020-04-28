@@ -6,6 +6,8 @@ driver:
 lint:
   name: yamllint
 platforms:
+  - name: archlinux
+    image: archlinux:latest
   - name: ubuntu1604
     image: ubuntu:16.04
   - name: ubuntu1804
