@@ -3,7 +3,7 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
+lint: |
   set -e
   yamllint .
   ansible-lint
